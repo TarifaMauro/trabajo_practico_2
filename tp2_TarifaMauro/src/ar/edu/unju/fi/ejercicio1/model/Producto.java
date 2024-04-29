@@ -6,16 +6,16 @@ public class Producto {
 	private double precioUnitario;
 	private OrigenFabricacion origenFabricacion;
 	private Categoria categoria;
-	
+	private boolean disponible;
 	
 	public Producto(String codigo, String descripcion, double precioUnitario,
-			OrigenFabricacion origenFabricacion,Categoria categoria) {
+			OrigenFabricacion origenFabricacion,Categoria categoria, boolean disponible) {
 		this.codigo = codigo;
 		this.descripcion = descripcion;
 		this.precioUnitario = precioUnitario;
 		this.origenFabricacion = origenFabricacion;
 		this.categoria = categoria;
-		
+		this.disponible = disponible;
 		
 	}
 	
@@ -67,6 +67,14 @@ public class Producto {
 
 	public void setCategoria(Categoria categoria) {
 		this.categoria = categoria;
+	}
+
+	public boolean isDisponible() {
+		return disponible;
+	}
+
+	public void setDisponible(boolean disponible) {
+		this.disponible = disponible;
 	}
 	
 	//GETTERS AND SETTERS 
