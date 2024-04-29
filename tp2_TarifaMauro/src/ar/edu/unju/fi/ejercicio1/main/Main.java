@@ -76,6 +76,7 @@ public class Main {
             System.out.print("Elija una opción: ");
             int opcionOrigen = scanner.nextInt();
             scanner.nextLine();
+            boolean disponible = true;
             OrigenFabricacion origenFabricacion = OrigenFabricacion.values()[opcionOrigen - 1];
 
             System.out.println("Categoría:");
@@ -85,7 +86,7 @@ public class Main {
             scanner.nextLine();
             Categoria categoria = Categoria.values()[opcionCategoria - 1];
 
-            Producto producto = new Producto(codigo, descripcion, precioUnitario, origenFabricacion, categoria);
+            Producto producto = new Producto(codigo, descripcion, precioUnitario, origenFabricacion, categoria, disponible);
             productos.add(producto);
             System.out.println("Producto creado exitosamente.");
         } catch (InputMismatchException e) {
