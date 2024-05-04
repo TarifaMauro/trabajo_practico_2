@@ -5,9 +5,9 @@ import java.util.ArrayList;
 import java.util.InputMismatchException;
 import java.util.Scanner;
 
-import ar.edu.unju.fi.ejercicio1.model.Producto;
-import ar.edu.unju.fi.ejercicio1.model.Producto.Categoria;
-import ar.edu.unju.fi.ejercicio1.model.Producto.OrigenFabricacion;
+import ar.edu.unju.fi.ejercicio5.model.Producto;
+import ar.edu.unju.fi.ejercicio5.model.Producto.Categoria;
+import ar.edu.unju.fi.ejercicio5.model.Producto.OrigenFabricacion;
 import ar.edu.unju.fi.ejercicio5.model.PagoEfectivo;
 import ar.edu.unju.fi.ejercicio5.model.PagoTarjeta;
 
