@@ -1,4 +1,8 @@
-package ar.edu.unju.fi.ejercicio1.model;
+package ar.edu.unju.fi.ejercicio5.model;
+
+
+import ar.edu.unju.fi.ejercicio1.model.Producto.Categoria;
+import ar.edu.unju.fi.ejercicio1.model.Producto.OrigenFabricacion;
 
 public class Producto {
 	private String codigo;
@@ -6,14 +10,16 @@ public class Producto {
 	private double precioUnitario;
 	private OrigenFabricacion origenFabricacion;
 	private Categoria categoria;
+	private boolean disponible;
 	
 	public Producto(String codigo, String descripcion, double precioUnitario,
-			OrigenFabricacion origenFabricacion,Categoria categoria) {
+			OrigenFabricacion origenFabricacion,Categoria categoria, boolean disponible) {
 		this.codigo = codigo;
 		this.descripcion = descripcion;
 		this.precioUnitario = precioUnitario;
 		this.origenFabricacion = origenFabricacion;
 		this.categoria = categoria;
+		this.disponible = disponible;
 		
 	}
 	
@@ -66,9 +72,25 @@ public class Producto {
 	public void setCategoria(Categoria categoria) {
 		this.categoria = categoria;
 	}
+
+	public boolean isDisponible() {
+		return disponible;
+	}
+
+	public void setDisponible(boolean disponible) {
+		this.disponible = disponible;
+	}
 	
 	//GETTERS AND SETTERS 
 	
-	
-
+    public String toString() {
+        return "Producto- " +
+                "Codigo='" + codigo + '\'' +
+                ", Descripcion='" + descripcion + '\'' +
+                ", Precio Unitario=" + precioUnitario +
+                ", Origen Fabricacion=" + origenFabricacion +
+                ", Categoria=" + categoria +
+                ", Disponible=" + disponible +
+                '.';
+    }
 }
